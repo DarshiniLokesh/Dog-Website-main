@@ -1,0 +1,17 @@
+{
+  "name": "dog-website-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass ./sass/index.scss ./css/style.css --watch",
+    "build": "sass ./sass/index.scss  ./css/style.css --style=compressed --no-source-map"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.83.1"
+  }
+}
