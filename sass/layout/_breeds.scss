@@ -1,0 +1,30 @@
+@use "../abstracts/" as abs;
+@use "../components/breeds-section";
+@use "../abstracts/mixins" as mix;
+
+.dog_breed {
+  @include mix.respond-to(768px) {
+    padding: 3rem 1rem;
+
+    .breed_heading {
+      font-size: 2rem;
+    }
+
+    .breed_grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+  @include mix.respond-to(480px) {
+    .breed_grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 1rem;
+    }
+
+    .breed_card img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}

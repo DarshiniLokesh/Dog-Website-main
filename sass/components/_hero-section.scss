@@ -1,0 +1,148 @@
+.hero {
+    background: #FFF5E6;
+    min-height: 20vh;
+    position: relative;
+    padding: 40px 20px;
+  
+    &__wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: center;
+      padding-bottom: 60px;
+  
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    &__container {
+      position: relative;
+    }
+  
+    .ellipse_container {
+      position: relative;
+      width: 100%;
+      max-width: 350px;
+      aspect-ratio: 1/1;
+      margin: auto;
+  
+      .ellipse-bg {
+        width: 100%;
+        height: auto;
+      }
+  
+      .dog-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+  
+        .corgi-image {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  
+    .bubbles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+  
+      span {
+        position: absolute;
+        background: rgba(255, 140, 0, 0.1);
+        border-radius: 50%;
+  
+        &.bubble_1 {
+          width: 30px;
+          height: 30px;
+          top: 20%;
+          left: 10%;
+        }
+  
+        &.bubble_2 {
+          width: 35px;
+          height: 35px;
+          top: 40%;
+          right: 15%;
+        }
+  
+        &.bubble_3 {
+          width: 20px;
+          height: 20px;
+          bottom: 30%;
+          left: 20%;
+        }
+      }
+    }
+  
+    .paw {
+      position: absolute;
+      width: 50px;
+      height: auto;
+  
+      &-left {
+        bottom: 10%;
+        left: 5%;
+      }
+  
+      &-right {
+        top: 15%;
+        right: 5%;
+      }
+    }
+  
+    &_text-content {
+      .hero_heading {
+        font-size: 36px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        
+        @media (max-width: 768px) {
+          font-size: 32px;
+        }
+      }
+  
+      .hero_text_content {
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        max-width: 90%;
+      }
+  
+      .hero_buy-btn {
+        display: inline-block;
+        background: #ff8c00;
+        color: white;
+        padding: 12px 32px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background 0.3s;
+  
+        &:hover {
+          background: darken(#ff8c00, 10%);
+        }
+      }
+    }
+  
+    &_social-icons {
+      position: absolute;
+      bottom: 30px;
+      right: 40px;
+      transform: none;
+      display: flex;
+      gap: 15px;
+  
+      img {
+        height: 20px;
+        width: auto;
+      }
+    }
+  }

@@ -1,7 +1,7 @@
+@use "../abstracts/variables" as vars;
 body {
     font-family: Arial, sans-serif;
-    color: $text-dark;
-    background-color: $background-color;
+    color: vars.$text-dark;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -9,8 +9,8 @@ body {
   }
   h1 {
     font-size: 2.5rem;
-    @include respond-to($breakpoint-medium) {
+     
     font-size: 3.5rem;
     }
-}
+
   

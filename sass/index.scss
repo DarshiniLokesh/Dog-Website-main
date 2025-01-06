@@ -1,18 +1,3 @@
-// Abstracts
-@use 'abstracts/variables';
-@use 'abstracts/mixins';
-
-// Base
-@use 'base/resets';
-@use 'base/typography';
-
-// Layout
-@use 'layout/header';
-@use'layout/footer';
-
-// Components
-@use 'components/hero';
-@use 'components/breeds';
-@use 'components/products';
-@use 'components/blog';
-@use 'components/newsletter';
+@use "abstracts";
+@use "base";
+@use "./pages/home.scss";
