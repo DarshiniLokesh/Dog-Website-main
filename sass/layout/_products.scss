@@ -1,2 +1,157 @@
 @use "../abstracts/" as abs;
 @use "../components/products-section";
+
+.pet_products {
+    padding: 40px 20px;
+}
+// Media Queries for Pet Products Section
+@media screen and (max-width: 1200px) {
+    .pet_products {
+      padding: 30px 15px;
+      
+      &_wrapper {
+        max-width: 90%;
+        gap: 25px;
+      }
+      
+      &_image {
+        gap: 12px;
+        
+        img {
+          height: 180px;
+        }
+      }
+      
+      .products_text-content {
+        .products_heading {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .pet_products {
+      padding: 25px 15px;
+      
+      &_image {
+        img {
+          height: 160px;
+        }
+      }
+      
+      .products_text-content {
+        gap: 15px;
+        
+        .products_heading {
+          font-size: 26px;
+        }
+        
+        .products_description {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .pet_products {
+      &_wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        
+        .left-side {
+          order: 2;
+        }
+        
+        .right-side {
+          order: 1;
+        }
+      }
+      
+      &_image {
+        gap: 10px;
+        
+        img {
+          height: 150px;
+        }
+      }
+      
+      .products_text-content {
+        text-align: center;
+        align-items: center;
+        
+        .products_heading {
+          font-size: 24px;
+        }
+        
+        .products_description {
+          font-size: 0.9rem;
+        }
+        
+        .see-more {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .pet_products {
+      padding: 20px 10px;
+      
+      &_image {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        
+        img {
+          height: 140px;
+        }
+      }
+      
+      .products_text-content {
+        gap: 12px;
+        
+        .products_heading {
+          font-size: 22px;
+        }
+        
+        .products_description {
+          font-size: 0.85rem;
+          line-height: 1.5;
+        }
+        
+        .see-more {
+          padding: 10px 18px;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 375px) {
+    .pet_products {
+      padding: 15px 10px;
+      
+      &_image {
+        img {
+          height: 120px;
+        }
+      }
+      
+      .products_text-content {
+        .products_heading {
+          font-size: 20px;
+        }
+        
+        .products_description {
+          font-size: 0.8rem;
+        }
+        
+        .see-more {
+          padding: 8px 16px;
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }

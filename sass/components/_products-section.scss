@@ -1,16 +1,14 @@
 .pet_products {
     padding: 40px 20px;
     
-    .products_wrapper {
+    &_wrapper {
       display: grid;
       grid-template-columns: 2fr 3fr;
       gap: 30px;
       max-width: 1200px;
       margin: 0 auto;
   
-      @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-      }
+     
   
       .left-side {
         order: 1;
@@ -27,7 +25,7 @@
       }
     }
   
-    .products_image {
+    &_image {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 15px;
@@ -66,6 +64,7 @@
         line-height: 1.6;
         margin: 0;
       }
+      
   
       .see-more {
         background: #ff8c00;

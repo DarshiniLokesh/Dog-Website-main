@@ -18,58 +18,59 @@ h1 {
   font-size: 3.5rem;
 }
 
-.blog {
-  padding: 60px 20px;
-}
-.blog .blog_container {
+.blog_container {
   max-width: 1200px;
   margin: 0 auto;
 }
-.blog .blog_heading {
+.blog_heading {
   text-align: center;
   font-size: 36px;
   margin-bottom: 10px;
 }
-.blog .blog_text {
+.blog_text {
   text-align: center;
   color: #666;
   margin-bottom: 40px;
 }
-.blog .blog-grid {
+.blog-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 @media (max-width: 1024px) {
-  .blog .blog-grid {
+  .blog-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 576px) {
-  .blog .blog-grid {
+  .blog-grid {
     grid-template-columns: 1fr;
   }
 }
-.blog .blog-card {
+.blog-card {
   background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
-.blog .blog-card:hover {
+.blog-card:hover {
   transform: translateY(-5px);
 }
-.blog .blog-card img {
+.blog-card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-.blog .blog-card h3 {
+.blog-card h3 {
   padding: 20px;
   margin: 0;
   font-size: 18px;
   line-height: 1.4;
+}
+
+.blog {
+  padding: 60px 20px;
 }
 
 .dog_breed {
@@ -95,10 +96,11 @@ h1 {
 }
 .dog_breed .breed_grid {
   display: grid;
-  height: 178px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  justify-items: end;
-  gap: -5rem;
+  min-height: 200px;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .dog_breed .breed_grid {
@@ -111,7 +113,7 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 100px;
-  height: 100px;
+  height: 150px;
   flex-direction: column;
   text-align: center;
   transition: transform 0.3s ease;
@@ -125,7 +127,7 @@ h1 {
   height: auto;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
   .dog_breed .breed_grid .breed_card img {
@@ -138,6 +140,8 @@ h1 {
   font-size: 0.9rem;
   font-weight: 500;
   margin-top: 0.5rem;
+  word-break: break-word;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   .dog_breed .breed_grid .breed_card p {
@@ -145,34 +149,85 @@ h1 {
   }
 }
 
-@media (min-width: 768px) {
-  .dog_breed {
-    padding: 3rem 1rem;
+@media screen and (max-width: 1200px) {
+  .dog_breed .breed_container {
+    max-width: 90%;
+    padding: 0 20px;
   }
+  .dog_breed .breed_grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 992px) {
   .dog_breed .breed_heading {
     font-size: 2rem;
   }
+  .dog_breed .breed_text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
   .dog_breed .breed_grid {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
+  .dog_breed .breed_card {
+    height: 160px;
+  }
 }
-@media (min-width: 480px) {
+@media screen and (max-width: 1200px) and (max-width: 768px) {
+  .dog_breed {
+    padding: 2rem 0;
+  }
   .dog_breed .breed_grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .dog_breed .breed_grid .breed_card {
+    width: 120px;
+    height: 170px;
+  }
+  .dog_breed .breed_grid .breed_card img {
+    width: 120px;
+    height: 120px;
+  }
+  .dog_breed .breed_grid .breed_card p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 576px) {
+  .dog_breed .breed_heading {
+    font-size: 1.8rem;
+  }
+  .dog_breed .breed_text {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .dog_breed .breed_grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  .dog_breed .breed_card img {
+  .dog_breed .breed_grid .breed_card {
+    width: 100px;
+    height: 140px;
+  }
+  .dog_breed .breed_grid .breed_card img {
+    width: 90px;
+    height: 90px;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 375px) {
+  .dog_breed .breed_grid .breed_card {
+    width: 90px;
+    height: 130px;
+  }
+  .dog_breed .breed_grid .breed_card img {
     width: 80px;
     height: 80px;
   }
-}
-
-.hero {
-  background: #FFF5E6;
-  min-height: 20vh;
-  position: relative;
-  padding: 40px 20px;
+  .dog_breed .breed_grid .breed_card p {
+    font-size: 0.75rem;
+  }
 }
 .hero__wrapper {
   max-width: 1200px;
@@ -256,17 +311,17 @@ h1 {
   top: 15%;
   right: 5%;
 }
-.hero_text-content .hero_heading {
+.hero_text-content_heading {
   font-size: 36px;
   line-height: 1.2;
   margin-bottom: 15px;
 }
 @media (max-width: 768px) {
-  .hero_text-content .hero_heading {
+  .hero_text-content_heading {
     font-size: 32px;
   }
 }
-.hero_text-content .hero_text_content {
+.hero_text-content_text_content {
   color: #666;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -297,6 +352,42 @@ h1 {
   width: auto;
 }
 
+.hero {
+  background: #FFF5E6;
+  min-height: 20vh;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.newsletter_form_heading {
+  font-size: 32px;
+  margin: 0 0 10px;
+}
+.newsletter_form_text {
+  color: #666;
+  margin-bottom: 24px;
+}
+.newsletter_form input[type=email] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.newsletter_form .newsletter_subscribe-btn {
+  background: #ff8c00;
+  color: white;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.newsletter_form .newsletter_subscribe-btn:hover {
+  background: #cc7000;
+}
+
 .newsletter {
   background: #FFF5E6;
   padding: 60px 20px;
@@ -323,83 +414,50 @@ h1 {
     margin: 0 auto;
   }
 }
-.newsletter .newsletter_form .newsletter_heading {
-  font-size: 32px;
-  margin: 0 0 10px;
-}
-.newsletter .newsletter_form .newsletter_text {
-  color: #666;
-  margin-bottom: 24px;
-}
-.newsletter .newsletter_form input[type=email] {
-  width: 100%;
-  max-width: 400px;
-  padding: 12px;
-  border: 2px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 16px;
-}
-.newsletter .newsletter_form .newsletter_subscribe-btn {
-  background: #ff8c00;
-  color: white;
-  padding: 12px 32px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.newsletter .newsletter_form .newsletter_subscribe-btn:hover {
-  background: #cc7000;
-}
 
 .pet_products {
   padding: 40px 20px;
 }
-.pet_products .products_wrapper {
+.pet_products_wrapper {
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
-  .pet_products .products_wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-.pet_products .products_wrapper .left-side {
+.pet_products_wrapper .left-side {
   order: 1;
 }
 @media (max-width: 768px) {
-  .pet_products .products_wrapper .left-side {
+  .pet_products_wrapper .left-side {
     order: 2;
   }
 }
-.pet_products .products_wrapper .right-side {
+.pet_products_wrapper .right-side {
   order: 2;
 }
 @media (max-width: 768px) {
-  .pet_products .products_wrapper .right-side {
+  .pet_products_wrapper .right-side {
     order: 1;
   }
 }
-.pet_products .products_image {
+.pet_products_image {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
-.pet_products .products_image img {
+.pet_products_image img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s;
 }
-.pet_products .products_image img:hover {
+.pet_products_image img:hover {
   transform: scale(1.05);
 }
 @media (max-width: 576px) {
-  .pet_products .products_image {
+  .pet_products_image {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -433,9 +491,119 @@ h1 {
   background: #cc7000;
 }
 
-.footer {
-  background: #f8f9fa;
-  padding: 60px 20px 20px;
+.pet_products {
+  padding: 40px 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .pet_products {
+    padding: 30px 15px;
+  }
+  .pet_products_wrapper {
+    max-width: 90%;
+    gap: 25px;
+  }
+  .pet_products_image {
+    gap: 12px;
+  }
+  .pet_products_image img {
+    height: 180px;
+  }
+  .pet_products .products_text-content .products_heading {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .pet_products {
+    padding: 25px 15px;
+  }
+  .pet_products_image img {
+    height: 160px;
+  }
+  .pet_products .products_text-content {
+    gap: 15px;
+  }
+  .pet_products .products_text-content .products_heading {
+    font-size: 26px;
+  }
+  .pet_products .products_text-content .products_description {
+    font-size: 0.95rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pet_products_wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pet_products_wrapper .left-side {
+    order: 2;
+  }
+  .pet_products_wrapper .right-side {
+    order: 1;
+  }
+  .pet_products_image {
+    gap: 10px;
+  }
+  .pet_products_image img {
+    height: 150px;
+  }
+  .pet_products .products_text-content {
+    text-align: center;
+    align-items: center;
+  }
+  .pet_products .products_text-content .products_heading {
+    font-size: 24px;
+  }
+  .pet_products .products_text-content .products_description {
+    font-size: 0.9rem;
+  }
+  .pet_products .products_text-content .see-more {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pet_products {
+    padding: 20px 10px;
+  }
+  .pet_products_image {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .pet_products_image img {
+    height: 140px;
+  }
+  .pet_products .products_text-content {
+    gap: 12px;
+  }
+  .pet_products .products_text-content .products_heading {
+    font-size: 22px;
+  }
+  .pet_products .products_text-content .products_description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .pet_products .products_text-content .see-more {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .pet_products {
+    padding: 15px 10px;
+  }
+  .pet_products_image img {
+    height: 120px;
+  }
+  .pet_products .products_text-content .products_heading {
+    font-size: 20px;
+  }
+  .pet_products .products_text-content .products_description {
+    font-size: 0.8rem;
+  }
+  .pet_products .products_text-content .see-more {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
 }
 .footer_container {
   max-width: 1200px;
@@ -516,6 +684,11 @@ h1 {
   .footer_social_links {
     justify-content: center;
   }
+}
+
+.footer {
+  background: #f8f9fa;
+  padding: 60px 20px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

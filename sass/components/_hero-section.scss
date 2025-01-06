@@ -1,8 +1,5 @@
 .hero {
-    background: #FFF5E6;
-    min-height: 20vh;
-    position: relative;
-    padding: 40px 20px;
+   
   
     &__wrapper {
       max-width: 1200px;
@@ -100,7 +97,7 @@
     }
   
     &_text-content {
-      .hero_heading {
+      &_heading {
         font-size: 36px;
         line-height: 1.2;
         margin-bottom: 15px;
@@ -110,7 +107,7 @@
         }
       }
   
-      .hero_text_content {
+    &_text_content {
         color: #666;
         line-height: 1.5;
         margin-bottom: 20px;

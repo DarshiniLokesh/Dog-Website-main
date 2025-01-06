@@ -1,24 +1,24 @@
 .blog {
-    padding: 60px 20px;
   
-    .blog_container {
+  
+    &_container {
       max-width: 1200px;
       margin: 0 auto;
     }
   
-    .blog_heading {
+    &_heading {
       text-align: center;
       font-size: 36px;
       margin-bottom: 10px;
     }
   
-    .blog_text {
+    &_text {
       text-align: center;
       color: #666;
       margin-bottom: 40px;
     }
   
-    .blog-grid {
+    &-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
@@ -32,7 +32,7 @@
       }
     }
   
-    .blog-card {
+    &-card {
       background: white;
       border-radius: 12px;
       overflow: hidden;

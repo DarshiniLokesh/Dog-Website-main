@@ -29,10 +29,11 @@
 
   .breed_grid {
       display: grid;
-      height: 178px;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      justify-items: end;
-      gap: -5rem;
+      min-height: 200px;
+      grid-template-columns: repeat(7, 1fr);
+      justify-items: center;
+      gap: 1rem;
+      padding: 1rem;
 
       @include mix.respond-to(768px) {
           grid-template-columns: repeat(7,minmax(100px, 1fr));
@@ -45,7 +46,7 @@
     justify-content: center; // Center content horizontally
     align-items: center; // Center content vertically
     width: 100px; // Fixed width for each card
-    height: 100px; 
+    height: 150px; 
     flex-direction: column;
     text-align: center;
     transition: transform 0.3s ease;
@@ -60,7 +61,7 @@
           height: auto;
           border-radius: 50%;
           object-fit: cover;
-          margin-bottom: 0;
+          margin-bottom: 0.5rem;
           
 
           @include mix.respond-to(768px) {
@@ -74,6 +75,8 @@
           font-size: 0.9rem;
           font-weight: 500;
           margin-top: 0.5rem;
+          word-break: break-word;
+          max-width: 100%;
 
           @include mix.respond-to(768px) {
               font-size: 1rem;
