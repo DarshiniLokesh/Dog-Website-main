@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as mix;
 
 @media screen and (max-width: 1200px) {
-  .dog_breed {
+  .breed {
     .breed_container {
       max-width: 90%;
       padding: 0 20px;

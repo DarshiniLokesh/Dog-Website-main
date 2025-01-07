@@ -73,28 +73,28 @@ h1 {
   padding: 60px 20px;
 }
 
-.dog_breed {
+.breed {
   padding: 0;
 }
-.dog_breed .breed_container {
+.breed .breed_container {
   max-width: 1166px;
   margin: 0 auto;
   height: auto;
   gap: 2rem;
 }
-.dog_breed .breed_heading {
+.breed .breed_heading {
   text-align: center;
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 1rem;
 }
-.dog_breed .breed_text {
+.breed .breed_text {
   text-align: center;
   color: #666666;
   font-size: 1.1rem;
   margin-bottom: 3rem;
 }
-.dog_breed .breed_grid {
+.breed .breed_grid {
   display: grid;
   min-height: 200px;
   grid-template-columns: repeat(7, 1fr);
@@ -103,12 +103,12 @@ h1 {
   padding: 1rem;
 }
 @media (min-width: 768px) {
-  .dog_breed .breed_grid {
+  .breed .breed_grid {
     grid-template-columns: repeat(7, minmax(100px, 1fr));
     gap: 0;
   }
 }
-.dog_breed .breed_grid .breed_card {
+.breed .breed_grid .breed_card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,10 +119,10 @@ h1 {
   transition: transform 0.3s ease;
   margin: 0;
 }
-.dog_breed .breed_grid .breed_card:hover {
+.breed .breed_grid .breed_card:hover {
   transform: translateY(-5px);
 }
-.dog_breed .breed_grid .breed_card img {
+.breed .breed_grid .breed_card img {
   width: 100%;
   height: auto;
   border-radius: 50%;
@@ -130,12 +130,12 @@ h1 {
   margin-bottom: 0.5rem;
 }
 @media (min-width: 768px) {
-  .dog_breed .breed_grid .breed_card img {
+  .breed .breed_grid .breed_card img {
     width: 120px;
     height: 120px;
   }
 }
-.dog_breed .breed_grid .breed_card p {
+.breed .breed_grid .breed_card p {
   color: #333;
   font-size: 0.9rem;
   font-weight: 500;
@@ -144,17 +144,17 @@ h1 {
   max-width: 100%;
 }
 @media (min-width: 768px) {
-  .dog_breed .breed_grid .breed_card p {
+  .breed .breed_grid .breed_card p {
     font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .dog_breed .breed_container {
+  .breed .breed_container {
     max-width: 90%;
     padding: 0 20px;
   }
-  .dog_breed .breed_grid {
+  .breed .breed_grid {
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
   }
