@@ -1,0 +1,41 @@
+@use "../components/header-section";
+@use "../abstracts/variables" as vars;
+.header {
+  background-color: vars.$background-color;
+  padding: 1rem 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+@media screen and (max-width: 992px) {
+  .nav-links {
+    gap: 1.5rem;
+    
+    .search-input {
+      width: 180px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .brand {
+    .logo {
+      width: 40px;
+      height: 40px;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .nav-links {
+    display: none; // Hide navigation on mobile - implement hamburger menu
+  }
+}
