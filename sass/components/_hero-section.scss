@@ -112,6 +112,7 @@
         line-height: 1.5;
         margin-bottom: 20px;
         max-width: 90%;
+        
       }
   
       .hero_buy-btn {
@@ -122,6 +123,7 @@
         border-radius: 6px;
         text-decoration: none;
         transition: background 0.3s;
+        gap: 20px;
   
         &:hover {
           background: darken(#ff8c00, 10%);
