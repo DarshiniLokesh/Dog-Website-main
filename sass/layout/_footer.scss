@@ -4,4 +4,41 @@
 .footer {
     background: #f8f9fa;
     padding: 60px 20px 20px;
-}
+
+    @media (max-width: 1200px) {
+        &_grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 30px;
+        }
+      }
+    
+      @media (max-width: 768px) {
+        &_grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+    
+        &_map {
+          margin: 15px auto; // Center the map
+        }
+      }
+    
+      @media (max-width: 576px) {
+        &_copyright {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+    
+        &_social_links {
+          justify-content: center;
+        }
+      }
+    
+      @media (max-width: 375px) {
+        &_map {
+          width: 100%; // Full width on very small screens
+          max-width: 300px; // But not larger than 300px
+        }
+      }
+    }

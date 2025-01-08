@@ -7,7 +7,7 @@
   padding: 0;
  
 
-  .breed_container {
+  &_container {
       max-width: 1166px;
       margin: 0 auto;
       height: auto;
@@ -15,21 +15,21 @@
      
   }
 
-  .breed_heading {
+  &_heading {
       text-align: center;
       font-size: 2.5rem;
       color: vars.$text-dark;
       margin-bottom: 1rem;
   }
 
-  .breed_text {
+  &_text {
       text-align: center;
       color: color.adjust(vars.$text-dark, $lightness: 20%);
       font-size: 1.1rem;
       margin-bottom: 3rem;
   }
 
-  .breed_grid {
+  &_grid {
       display: grid;
       min-height: 200px;
       grid-template-columns: repeat(7, 1fr);
@@ -43,11 +43,11 @@
       }
   
 
-  .breed_card {
-    display: flex; // Use flexbox for better alignment
-    justify-content: center; // Center content horizontally
-    align-items: center; // Center content vertically
-    width: 100px; // Fixed width for each card
+  &_card {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100px; 
     height: 150px; 
     flex-direction: column;
     text-align: center;

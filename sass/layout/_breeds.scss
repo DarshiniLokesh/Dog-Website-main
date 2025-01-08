@@ -3,13 +3,13 @@
 
 @media screen and (max-width: 1200px) {
   .breed {
-    .breed_container {
+    &_container {
       max-width: 90%;
       padding: 0 20px;
     }
     
      
-      .breed_grid {
+      &_grid {
         grid-template-columns: repeat(6, 1fr);
         gap: 1rem;
     }
@@ -17,35 +17,35 @@
 }
 
 @media screen and (max-width: 992px) {
-  .dog_breed {
-    .breed_heading {
+  .breed {
+    &_heading {
       font-size: 2rem;
     }
     
-    .breed_text {
+    &_text {
       font-size: 1rem;
       margin-bottom: 2rem;
     }
     
-    .breed_grid {
+    &_grid {
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
     }
-    .breed_card {
+    &_card {
       height: 160px;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
-  .dog_breed {
+  .breed {
     padding: 2rem 0;
     
-    .breed_grid {
+    &_grid {
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
       
-      .breed_card {
+      &_card {
         width: 120px;
         height: 170px;
         
@@ -63,21 +63,21 @@
 }
 
 @media screen and (max-width: 576px) {
-  .dog_breed {
-    .breed_heading {
+  .breed {
+    &_heading {
       font-size: 1.8rem;
     }
     
-    .breed_text {
+    &_text {
       font-size: 0.9rem;
       margin-bottom: 1.5rem;
     }
     
-    .breed_grid {
+    &_grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
       
-      .breed_card {
+      &_card {
         width: 100px;
         height: 140px;
         
@@ -91,9 +91,9 @@
 }
 
 @media screen and (max-width: 375px) {
-  .dog_breed {
-    .breed_grid {
-      .breed_card {
+  .breed {
+    &_grid {
+      &_card {
         width: 90px;
         height: 130px;
         

@@ -1,5 +1,5 @@
-.pet_products{
-  .products_wrapper {
+.products{
+  &_wrapper {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: 30px;
@@ -19,7 +19,7 @@
         order: 1;
       }
 
-      .products_image {
+      &_image {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
@@ -43,19 +43,19 @@
     }
   }
 
-  .products_text-content {
+  &_text-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
 
-    .products_heading {
+    &_heading {
       font-size: 32px;
       font-weight: 600;
       margin: 0;
     }
 
-    .products_description {
+    &_description {
       color: #666;
       line-height: 1.6;
       margin: 0;
