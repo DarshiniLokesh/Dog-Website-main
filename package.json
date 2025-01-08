@@ -7,7 +7,7 @@
     
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "sass ./sass/index.scss ./css/style.css --watch",
-    "build": "sass ./sass/index.scss  ./css/style.css --style=compressed --no-source-map"
+    "build": "sass ./sass/index.scss ./dist/style.css --style=compressed --no-source-map"
   },
   "author": "",
   "license": "ISC",
