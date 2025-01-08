@@ -47,12 +47,13 @@
       &__wrapper {
         grid-template-columns: 1fr;
         text-align: center;
-        padding: 40px 20px;
+        min-height: auto;
+        padding-bottom: 100px;
       }
   
       &_text-content {
         &_heading {
-          font-size: 28px;
+          font-size: 32px;
           margin-bottom: 25px;
         }
   
@@ -62,6 +63,25 @@
   
         .hero_buy-btn {
           margin: 15px auto;
+        }
+      }
+      &__navigation {
+        bottom: 20px;
+  
+        &_breed-info {
+          font-size: 14px;
+          gap: 15px;
+          margin-bottom: 25px;
+        }
+  
+        &_scroll-down {
+          width: 40px;
+          height: 40px;
+          bottom: -40px;
+  
+          img {
+            width: 16px;
+          }
         }
       }
   
@@ -119,6 +139,25 @@
           height: 15px;
         }
       }
+      &__navigation {
+       bottom: 10px;
+  
+        &_breed-info {
+          font-size: 13px;
+          gap: 12px;
+          margin-bottom: 20px;
+        }
+  
+        &_scroll-down {
+          width: 36px;
+          height: 36px;
+          bottom: 40px;
+          top: 100px;
+  
+          img {
+            width: 50px;
+          }
+        }
     }
   }
   
@@ -135,3 +174,4 @@
       }
     }
   }
+}

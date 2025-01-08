@@ -28,12 +28,18 @@
           flex-direction: column;
           gap: 20px;
           text-align: center;
+          position: static;
+          transform: none;
         }
     
         &_social_links {
           justify-content: center;
         }
+        a{ 
+          justify-content: center;
+        }
       }
+      
     
       @media (max-width: 375px) {
         &_map {
