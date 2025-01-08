@@ -1,3 +1,4 @@
+@use "sass:color";
 .hero {
   &__wrapper {
       max-width: 1200px;
@@ -124,7 +125,7 @@
         margin-top: 20px;
   
         &:hover {
-          background: darken(#ff8c00, 10%);
+          background: color.adjust(#ff8c00, $lightness: -10%);
         }
       }
     }

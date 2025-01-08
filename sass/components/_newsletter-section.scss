@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .newsletter {
     
     &_form {
@@ -30,7 +32,7 @@
         transition: background 0.3s;
   
         &:hover {
-          background: darken(#ff8c00, 10%);
+          background: color.adjust(#ff8c00, $lightness: -10%);
         }
       }
     }
